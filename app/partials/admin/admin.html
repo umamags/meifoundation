@@ -1,0 +1,24 @@
+<div class="main_content">
+You are here: Home > Admin
+<hr>
+
+<ul class="nav nav-tabs">
+  <li id="tabOption0" class="active"><a href="#/admin">Student Details</a></li>
+  <li id="tabOption1" ><a href="#/admin/studentDetails">Student Details 2</a></li>
+  <li id="tabOption2" ><a href="#/admin/studentDetails2">Student Details 3</a></li>
+</ul>
+
+<div ng-switch="tabOption">
+	<div ng-switch-when="0">
+		<div class="gridStyle" ng-grid="gridOptions">
+		</div>
+	</div>
+	<div ng-switch-when="1">
+		<div class="gridStyle" ng-grid="gridOptions">
+		</div>
+	</div>
+	<div ng-switch-when="2">
+		<div class="gridStyle" ng-grid="gridOptions">
+		</div>
+	</div>	
+</div>

@@ -1,0 +1,35 @@
+<div class="main_content">
+	You are here: Home > Teachers List
+	<hr>
+	<div class="teachersList">
+		<div class="row">
+			<div class="col-md-1">SNo</div>
+			<div class="col-md-2">Name of staff</div>
+			<div class="col-md-3">Image (click)</div>
+			<div class="col-md-2">Designation / Class</div>
+			<div class="col-md-2">Subject</div>
+			<div class="col-md-2">Date of joining</div>
+		</div>
+		<div
+			ng-repeat="teacher in teachers | filter:query | orderBy:orderProp"
+			class="thumbnail">
+			<div class="row">
+				<div class="col-md-1">{{teacher.sno}}</div>
+				<div class="col-md-2">{{teacher.name}}</div>
+				<div class="col-md-3">
+					<a href="#/photoDetail/{{teacher.img}}"><img ng-src="{{teacher.img}}" /></a>
+				</div>
+				<div class="col-md-2">
+					{{teacher.designation}} / 
+					 {{teacher.classes}}
+				</div>	 
+				<div class="col-md-2">{{teacher.subject}}</div>
+				<div class="col-md-2">{{teacher.doj}}</div>
+			</div>
+		</div>
+	</div>
+	<modal-dialog show='modalShown' width='550' height='340'>
+		<img ng-src="{{modalDialogImage}}" />
+	</modal-dialog>
+
+</div>

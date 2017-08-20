@@ -1,0 +1,80 @@
+<div class="main_content studentList">
+You are here: Home > Students List
+	<modal-dialog show='modalShown' student-dto="studentDto" width='1000' height='440'>
+		<div class="row">
+			<div class="col-md-6">
+				<img class="modelDialogImage" ng-src="{{modalDialogImage}}" />
+			</div>
+			<div class="col-md-6">
+				<div class="row">
+					<div class="col-md-2">
+						<input type="button" class="form-control" ng-click="saveStudentDetail()" value="Save" />
+					</div>
+					<div class="col-md-2">
+						<input type="button" class="form-control" ng-click="cancelStudentDetail()" value="Cancel" />
+					</div>
+					<div class="col-md-3">	
+						<label>{{studentDto.regNo}}</label>
+					</div>
+					<div class="col-md-5">
+						<label>{{studentDto.studentName}}</label>
+					</div>	
+				</div>	
+				<div class="row">
+					<div class="col-md-12">
+						<textarea rows="17" class="form-control" name="studentComments" ng-model="studentDto.studentComments" />
+					</div>			
+				</div>
+			</div>
+		</div>
+	</modal-dialog>
+	<div class="row classButtons">
+		<div class="col-md-1">
+			<input type="button" class="btn btn-lg" ng-click="selectClass('ALL')" value="ALL"/>			
+		</div>	
+		<div class="col-md-1">
+			<input type="button" class="btn btn-lg" ng-click="selectClass('LKG')" value="LKG"/>			
+		</div>	
+		<div class="col-md-1">
+			<input type="button" class="btn btn-lg" ng-click="selectClass('UKG')" value="UKG"/>			
+		</div>	
+		<div class="col-md-1">
+			<input type="button" class="btn btn-lg" ng-click="selectClass('1')" value="Class 1"/>			
+		</div>	
+		<div class="col-md-1">
+			<input type="button" class="btn btn-lg" ng-click="selectClass('2')" value="Class 2"/>			
+		</div>	
+		<div class="col-md-1">
+			<input type="button" class="btn btn-lg" ng-click="selectClass('3')" value="Class 3"/>			
+		</div>	
+		<div class="col-md-1">
+			<input type="button" class="btn btn-lg" ng-click="selectClass('4')" value="Class 4"/>			
+		</div>	
+		<div class="col-md-1">
+			<input type="button" class="btn btn-lg" ng-click="selectClass('5')" value="Class 5"/>			
+		</div>	
+		<div class="col-md-1">
+			<input type="button" class="btn btn-lg" ng-click="selectClass('6')" value="Class 6"/>			
+		</div>	
+		<div class="col-md-1">
+			<input type="button" class="btn btn-lg" ng-click="selectClass('7')" value="Class 7"/>			
+		</div>	
+		<div class="col-md-1">
+			<input type="button" class="btn btn-lg" ng-click="selectClass('8')" value="Class 8"/>			
+		</div>	
+		<div class="col-md-1">
+			<input type="button" class="btn btn-lg" ng-click="selectClass('9_10')" value="Class 9&10"/>			
+		</div>	
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<input class="filterText" type="text" ng-model="filterOptions.filterText" placeholder="Enter search term"/>			
+		</div>	
+	</div>
+	<div class="row"">
+		<div class="col-md-12">
+			<div id="studentsGrid" class="gridStyle" ng-grid="gridOptions">
+			</div>
+		</div>			
+	</div>
+</div>

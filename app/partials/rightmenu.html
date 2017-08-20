@@ -1,0 +1,47 @@
+<div>
+	<div id="panel-login" class="panel panel-default">
+		<div class="panel-heading">Login</div>
+		<div class="panel-body">
+			<form ng-controller="loginCtrl">
+				<div class="col-md-2">
+					<div ng-switch on="User.isLogged">
+						<div ng-switch-when="false">
+							<p class="nowrap error">{{User.error}}</p>
+							<input type="text" ng-model="User.username" />
+							<input type="password" ng-model="User.password" /> 
+							<button type="button" class="btn btn-lg" ng-click="login()">Login</button>
+						</div>
+						<div ng-switch-when="true">
+							<div class="nowrap">Username: admin logged in</div>
+							<button type="button" class="btn btn-lg" ng-click="logout()">Logout</button>
+						</div>
+					</div>									
+				</div>
+			</form>
+		</div>
+	</div>		
+	<a href="#/newsLetter">
+	<div id="panel-newsletter" class="panel panel-default">
+		<div class="panel-heading">Newsletters</div>
+		<div class="panel-body">
+			We have lots of happenings (skype session, school day celebrations, outside tours) to talk about. Click here for more.
+		</div>
+	</div>
+	</a>
+	<a href="#/feeStructure">
+	<div id="panel-feeStructure" class="panel panel-default panel-success">
+		<div class="panel-heading">Fee Structure</div>
+		<div class="panel-body">
+			<div vanavani-fee-structure ng-controller="feeStructureCtrl" ng-model="data" style="width:200px;height:100px"></div>
+		</div>
+	</div>
+	</a>
+	<a href="#/contactUs">
+	<div id="panel-location" class="panel">
+		<div class="panel-heading">Our Location</div>
+		<div class="panel-body">
+			<img src="images/map/school_location_01.jpg" width="200px" />
+		</div>
+	</div>
+	</a>
+</div>

@@ -1,0 +1,6 @@
+[{"routingnumber":11000015,"telegraphicname":"FRB-BOS","customername":"FEDERAL RESERVE BANK OF BOSTON","state":"MA","city":"BOSTON","fundstxfrsatus":"Y","fundssettlementstatus":"","bookentrystatus":"Y","dateoflastrev":20040910},
+{"routingnumber":11000028,"telegraphicname":"STATE ST BOS","customername":"STATE STREET BOSTON","state":"MA","city":"BOSTON","fundstxfrsatus":"Y","fundssettlementstatus":"","bookentrystatus":"Y","dateoflastrev":null},
+{"routingnumber":11000536,"telegraphicname":"FHLB BOSTON","customername":"FEDERAL HOME LOAN BANK","state":"MA","city":"BOSTON","fundstxfrsatus":"Y","fundssettlementstatus":"","bookentrystatus":"Y","dateoflastrev":null},
+{"routingnumber":11001234,"telegraphicname":"MELLON TRUST OF NE","customername":"THE BANK OF NEW YORK MELLON","state":"MA","city":"BOSTON","fundstxfrsatus":"Y","fundssettlementstatus":"","bookentrystatus":"N","dateoflastrev":20120815},
+{"routingnumber":11001276,"telegraphicname":"ONEUNITED BANK","customername":"ONEUNITED BANK","state":"MA","city":"BOSTON","fundstxfrsatus":"Y","fundssettlementstatus":"","bookentrystatus":"Y","dateoflastrev":20021231},
+{"routingnumber":11001881,"telegraphicname":"FIDUCIARY TR BOS","customername":"FIDUCIARY TRUST COMPANY","state":"MA","city":"BOSTON","fundstxfrsatus":"Y","fundssettlementstatus":"","bookentrystatus":"Y","dateoflastrev":null}]

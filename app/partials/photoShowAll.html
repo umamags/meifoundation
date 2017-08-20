@@ -1,0 +1,13 @@
+<div class="main_content">
+You are here: Home > <a href="#/photoGallery">Photo Gallery</a> > Photo List
+<hr>
+<div class="main_content">
+<div class="photoList">
+    <div ng-repeat="photo in photos">
+        <div class="col-md-3">
+	        <a href="#/photoDetail/{{photo.filename}}">
+	        	<img class="myphoto" ng-src="{{photo.filename}}" /></a>
+        </div>
+    </div>
+</div>    
+</div>

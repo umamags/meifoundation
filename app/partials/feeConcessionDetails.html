@@ -1,0 +1,24 @@
+<div class="main_content">
+You are here: Home > Fee Concession Details
+<hr>
+
+<ul class="nav nav-tabs">
+  <li id="tabOption0" class="active"><a href="#/feeConcessionDetails">3 students in one family</a></li>
+  <li id="tabOption1" ><a href="#/feeConcessionDetails/1">1st Rank Holders</a></li>
+  <li id="tabOption2" ><a href="#/feeConcessionDetails/2">Full Term Fee Concession</a></li>
+</ul>
+
+<div ng-switch="tabOption">
+	<div ng-switch-when="0">
+		<div class="gridStyle" ng-grid="gridOptions0">
+		</div>
+	</div>
+	<div ng-switch-when="1">
+		<div class="gridStyle" ng-grid="gridOptions1">
+		</div>
+	</div>
+	<div ng-switch-when="2">
+		<div class="gridStyle" ng-grid="gridOptions2">
+		</div>
+	</div>	
+</div>

@@ -1,0 +1,256 @@
+body {
+	margin-left: 30px;
+	width: 95%;
+	background: #FFF9CC;
+	border: 1px solid #E5E5E5;
+	font-family: Arial, Helvetica, Sans-serif;
+}
+.leftmenu {
+	background: #FFF9CC;
+}
+
+.rightmenu {
+	background: #FFF9CC;
+}
+p {
+	margin: 0;
+	padding: 0;
+}
+img {
+	cursor: pointer;
+}
+#header {
+	background: #FFF9CC;
+}
+.headerLogo {
+	margin-left: 10px;
+}
+.headerButtons {
+	margin-left: 10px;
+}
+.headerButtons button {
+	background: #FAEBD7;
+	color: red;
+	font-weight: bold;
+	font-family: Arial, Helvetica, Sans-serif;
+	font-size: 14px;
+}
+.schoolName {
+	color: blue;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+.schoolLocation {
+	color: blue;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+#mainbodyhomepage {
+	background: #FFF9CC;
+}
+.mainbodyhomepagetable2
+{
+	background: #FFD009;
+	color: #000000;
+	padding: 10px 10px 10px 10px;
+	border-top-left-radius: 12px;
+	border-top-right-radius: 12px;
+	border-bottom-right-radius: 12px;
+	border-bottom-left-radius: 12px;
+	border: 3px solid #E5E5E5;
+}
+
+.main_content {
+	padding: 5px 5px 5px 5px;
+	background: #FFF9CC;
+	font-weight: bold;
+	margin-left: 10px;
+}
+
+img.myphoto {
+	margin-bottom: 5px;
+}
+/* bootstrap related styles */
+.teachersList {
+	background: #F2F3F4;
+}
+.mainbody {
+	background: #FFF9CC;
+	
+}
+#footer
+{
+	background: #F2F3F4;
+	font-size: 10px;
+	border-top: 1px solid #000000;
+}
+.realbig {
+	padding-top: 20px;
+	font-size: 36px;
+}
+#notice {
+	margin-top: 10px;
+	font-weight: bold;
+}
+.showcaseheader {
+	font-weight: bold;
+	color: red;
+}
+p.red {
+	color: red;
+}
+p.blue {
+	color: blue;
+}
+p.yellow {
+	color: yellow;
+}
+
+#my-slider-id {
+	margin-left: 10px;
+	margin-top: 5px;
+	height: 413px;
+	width: 550px;
+	background: url('../images/homepage/01.jpg');
+}
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
+	background: #eaeaea;
+}
+.panel-default {
+	margin-top: 5px;
+}
+
+.circles {
+	margin-top: 10px;
+}
+.circleText {
+	margin-left: 25px;
+	font-weight: bold;
+}
+
+.circle {
+    border-radius: 50%;
+	margin: 5px;
+	margin-left: 400px;
+    width: 100px;
+    height: 100px;
+    padding: 8px;
+	padding-top: 40px;
+	
+    background: #f2f3f4;
+    border: none;
+    color: #666;
+    text-align: center;
+
+    font: 12px Arial, sans-serif;
+    font-weight: bold;
+}
+img#student_with_books {
+	margin-top: 20px;
+	width: 60px;
+}
+.circleActive {
+	margin-left: -10px;
+	transition: margin-left 2s;
+}
+#circle1 {
+	background: #efdecd;
+	color: #e52b50;	
+}
+#circle2 {
+	background: #f0f8ff;
+	color: #007fff;
+}
+#circle3 {
+	background: #f7f75e;
+	color: #568203;
+}
+#circle4 {
+	background: #4b0082;
+	color: #ffffff;
+}
+#circle5 {
+	background: #ff4f00;
+	color: #f4f0ec;
+}
+.video {
+	margin-top: 20px;
+}
+#studentsGrid {
+	width: 100%;
+	height: 20000px;
+}
+#khanAcademyGrid {
+	width: 100%;
+}
+/* Modals */
+.ng-modal-overlay {
+  /* A dark translucent div that covers the whole screen */
+  position:absolute;
+  z-index:9999;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background-color:#000000;
+  opacity: 0.8;
+}
+.ng-modal-dialog {
+  /* A centered div above the overlay with a box shadow. */
+  z-index:10000;
+  position: fixed;
+
+  /* Center the dialog */
+  top: 100px;
+  left: 10px;
+  transform: translate(0%, 0%);
+  -webkit-transform: translate(0%, 0%);
+  -moz-transform: translate(0%, 0%);
+
+  background-color: #fff;
+  box-shadow: 4px 4px 80px #000;
+}
+.ng-modal-dialog-content {
+  padding:10px;
+  text-align: left;
+}
+.ng-modal-close {
+  position: absolute;
+  top: 3px;
+  right: 5px;
+  padding: 5px;
+  cursor: pointer;
+  font-size: 120%;
+  display: inline-block;
+  font-weight: bold;
+  font-family: 'arial', 'sans-serif';
+}
+.nowrap {
+	white-space: nowrap;
+}
+.wrap {
+	word-wrap: break-word;
+}
+.error {
+	color: red;
+}
+#panel-login > .panel-heading {
+	background: #AF002A;
+	color: #F2F3F4;
+}
+#panel-newsletter > .panel-heading {
+	background: #CF6210;
+	color: #EFDECD;
+}
+.studentList > .row {
+	padding: 5px;
+}
+.classButtons > .col-md-1 {
+	width: 7%;
+}
+input.filterText {
+	width: 100%;
+}
