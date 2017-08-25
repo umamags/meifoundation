@@ -1,23 +1,23 @@
 'use strict';
 
 /* Controllers */
-var vanavaniControllers = angular.module('vanavaniControllers');
+var meiFoundationControllers = angular.module('meiFoundationControllers');
 
-vanavaniControllers.controller('feeStructureCtrl', 
+meiFoundationControllers.controller('feeStructureCtrl',
         function($scope, $location, $http) {
 			//$scope.data = [[[0, 1], [1, 5], [2, 2]]];
 			var d1 = [[0, 8500], [1, 8500], [2, 9000], [3, 9000], [4, 9000], [5, 9000], [6, 9000], [7, 9500], [8, 9500], [9, 9500], [10, 10000], [11, 10000]];
 			var d2 = [[0, 9350], [1, 9350], [2, 9900], [3, 9900], [4, 9900], [5, 9900], [6, 9900], [7, 10450], [8, 10450], [9, 10450], [10, 11000], [11, 11000]];
 			var d3 = [[0, 10285], [1, 10285], [2, 10890], [3, 10890], [4, 10890], [5, 10890], [6, 10890], [7, 11495], [8, 11495], [9, 11495], [10, 12100], [11, 12100]];
-			
+
 			$scope.data = [{label: '2013', data: d1}, {label: '2014', data: d2}, {label: '2015', data: d3}];
         });
 
 
-vanavaniControllers.directive('vanavaniFeeStructure', function() {
+meiFoundationControllers.directive('meiFoundationFeeStructure', function() {
 	return {
 		controller : function($scope) {
-						
+
 		},
 		link : function(scope, element, attrs) {
 			var data = scope[attrs.ngModel];
@@ -31,7 +31,7 @@ vanavaniControllers.directive('vanavaniFeeStructure', function() {
 				}
 			};
             $.plot(element, data, options);
-            element.show();		
+            element.show();
         }
 	};
 });

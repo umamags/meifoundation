@@ -1,30 +1,30 @@
 'use strict';
 
 /* Services */
-var vanavaniServices = angular.module('vanavaniServices', ['ngResource']);
+var meiFoundationServices = angular.module('meiFoundationServices', ['ngResource']);
 
-vanavaniServices.factory('Teacher', ['$resource',
+meiFoundationServices.factory('Teacher', ['$resource',
   function($resource){
     return $resource('php/teachersList.php', {}, {
       query: {method:'GET', isArray:true}
     });
   }]);
 
-vanavaniServices.factory('Photo', ['$resource',
+meiFoundationServices.factory('Photo', ['$resource',
  function($resource){
    return $resource('php/photoShowAll.php?folderName=:folderName', {}, {
      query: {method:'GET', params:{folderName:'folderName'}, isArray:true}
    });
  }]);
 
-vanavaniServices.factory('GridData', ['$resource',
+meiFoundationServices.factory('GridData', ['$resource',
    function($resource){
      return $resource('jsondata/fedrouting.json', {}, {
        query: {method:'GET', isArray:true}
      });
    }]);
 
-vanavaniServices.factory('User', [function() {
+meiFoundationServices.factory('User', [function() {
 	var sdo = {
 		isLogged: false,
 		username: ''

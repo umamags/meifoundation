@@ -1,23 +1,23 @@
 'use strict';
 
 /* Controllers */
-var vanavaniControllers = angular.module('vanavaniControllers');
+var meiFoundationControllers = angular.module('meiFoundationControllers');
 
-vanavaniControllers.controller('adminCtrl', 
+meiFoundationControllers.controller('adminCtrl',
         function($scope, $location, $http) {
-	
+
 		  var path = $location.path();
 		  $("#tabOption0").removeClass("active");
 		  $("#tabOption1").removeClass("active");
 		  $("#tabOption2").removeClass("active");
-		  
+
 		  //od6 - class lkg
 		  //od7 - class ukg
 		  //od8 - class 5
 		  //od9 - class 6
 		  //od4 - class 1
-		  
-		  
+
+
 		  switch (path) {
 			  case "/admin" :
 				  $scope.tabOption = "0";
@@ -35,17 +35,17 @@ vanavaniControllers.controller('adminCtrl',
 				  $scope.tabOption = "0";
 				  break;
 		  };
-			  
+
 		$scope.filterOptions = {
         	        filterText: "",
         	        useExternalFilter: true
-        	    }; 
+        	    };
           $scope.totalServerItems = 0;
           $scope.pagingOptions = {
               pageSizes: [10, 250, 500, 1000],
               pageSize: 10,
               currentPage: 1
-          };	    
+          };
           $scope.setPagingData = function(data, page, pageSize){
               //$scope.myData = data;
         	  $scope.myData = data.feed.entry;
@@ -60,15 +60,15 @@ vanavaniControllers.controller('adminCtrl',
                   //var url = 'jsondata/studentsList.json';
                   //var url = 'https://spreadsheets.google.com/feeds/list/0AnmfnATpC8YhdGdFMlpaZmREb1JGSGxhV180Z2VWaWc/od6/public/values?alt=json';
                   var url = 'https://spreadsheets.google.com/feeds/list/0AnmfnATpC8YhdGdFMlpaZmREb1JGSGxhV180Z2VWaWc/od5/public/values?alt=json';
-                  
+
                   if (searchText) {
                       var ft = searchText.toLowerCase();
-                      $http.get(url).success(function (largeLoad) {		
+                      $http.get(url).success(function (largeLoad) {
                           data = largeLoad.filter(function(item) {
                               return JSON.stringify(item).toLowerCase().indexOf(ft) != -1;
                           });
                           $scope.setPagingData(data,page,pageSize);
-                      });            
+                      });
                   } else {
                       $http.get(url).success(function (largeLoad) {
                           $scope.setPagingData(largeLoad,page,pageSize);
@@ -98,6 +98,6 @@ vanavaniControllers.controller('adminCtrl',
         	        	            {field: "gsx$nameofstudents.$t", displayName: "Name"}
         	        	        ]
         	    };
-          
+
         });
 

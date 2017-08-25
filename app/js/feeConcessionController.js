@@ -1,16 +1,16 @@
 'use strict';
 
 /* Controllers */
-var vanavaniControllers = angular.module('vanavaniControllers');
+var meiFoundationControllers = angular.module('meiFoundationControllers');
 
-vanavaniControllers.controller('feeConcessionDetailsCtrl', 
+meiFoundationControllers.controller('feeConcessionDetailsCtrl',
         function($scope, $location, $http) {
-	
-		  var path = $location.path();		  
+
+		  var path = $location.path();
 		  $("#tabOption0").removeClass("active");
 		  $("#tabOption1").removeClass("active");
 		  $("#tabOption2").removeClass("active");
-		  
+
 		  switch (path) {
 			  case "/feeConcessionDetails" :
 				  $scope.tabOption = "0";
@@ -28,19 +28,19 @@ vanavaniControllers.controller('feeConcessionDetailsCtrl',
 				  $scope.tabOption = "0";
 				  break;
 		  };
-			  
-		  
-		  
+
+
+
           $scope.filterOptions = {
         	        filterText: "",
         	        useExternalFilter: true
-        	    }; 
+        	    };
           $scope.totalServerItems = 0;
           $scope.pagingOptions = {
               pageSizes: [10, 250, 500, 1000],
               pageSize: 10,
               currentPage: 1
-          };	    
+          };
           $scope.setPagingData = function(data, page, pageSize){
               $scope.myData = data;
               if (!$scope.$$phase) {
@@ -52,12 +52,12 @@ vanavaniControllers.controller('feeConcessionDetailsCtrl',
                   var data;
                   if (searchText) {
                       var ft = searchText.toLowerCase();
-                      $http.get('jsondata/feeConcession.json').success(function (largeLoad) {		
+                      $http.get('jsondata/feeConcession.json').success(function (largeLoad) {
                           data = largeLoad.filter(function(item) {
                               return JSON.stringify(item).toLowerCase().indexOf(ft) != -1;
                           });
                           $scope.setPagingData(data,page,pageSize);
-                      });            
+                      });
                   } else {
                       $http.get('jsondata/feeConcession.json').success(function (largeLoad) {
                           $scope.setPagingData(largeLoad,page,pageSize);
@@ -124,6 +124,6 @@ vanavaniControllers.controller('feeConcessionDetailsCtrl',
         	        	{field: "TOTAL"}
         	        ]
         	    };
-          
+
         });
 

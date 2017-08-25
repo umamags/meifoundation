@@ -1,14 +1,14 @@
 'use strict';
- 
+
 /* App Module */
-var vanavaniApp = angular.module('vanavaniApp', [
+var meiFoundationApp = angular.module('meiFoundationApp', [
   'ngRoute',
   'ngGrid',
-  'vanavaniControllers',
-  'vanavaniFilters',
-  'vanavaniServices'
+  'meiFoundationControllers',
+  'meiFoundationFilters',
+  'meiFoundationServices'
 ]);
-vanavaniApp.config(['$routeProvider',
+meiFoundationApp.config(['$routeProvider',
   function($routeProvider) {
 	  $routeProvider.when('/home', {templateUrl: 'partials/home.html', controller: 'homeCtrl'});
 	  $routeProvider.when('/pta', {templateUrl: 'partials/pta.html', controller: 'ptaCtrl'});
@@ -54,13 +54,13 @@ vanavaniApp.config(['$routeProvider',
 .factory('validateCookie', function($http, User){
     return function(scope) {
 		var url = "php/ReadCookie.php?action=read";
-        $http.get(url).success(function (response) {		
+        $http.get(url).success(function (response) {
             User.password = "";
             User.isLogged = response[0].loggedin;
             User.username = response[0].username;
             if (User.isLogged) {
             	$("#adminMenu").show();
             }
-        });            								
+        });
     }
 });

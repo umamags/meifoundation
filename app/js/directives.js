@@ -1,7 +1,7 @@
 'use strict';
-var vanavaniControllers = angular.module('vanavaniControllers');
+var meiFoundationControllers = angular.module('meiFoundationControllers');
 /* Directives */
-vanavaniControllers.directive('modalDialog', function() {
+meiFoundationControllers.directive('modalDialog', function() {
 	return {
 	    restrict: 'AE',
 	    scope: {
@@ -15,7 +15,7 @@ vanavaniControllers.directive('modalDialog', function() {
 	      scope.hideModal = function() {
 		        scope.show = false;
 		      };
-	      
+
 		  scope.dialogStyle = {};
 	      if (attrs.width)
 	        scope.dialogStyle.width = attrs.width;
@@ -25,7 +25,7 @@ vanavaniControllers.directive('modalDialog', function() {
 	  };
 	});
 
-vanavaniControllers.directive('checkUser', ['$rootScope', '$location', 'userSrv', function ($root, $location, userSrv) {
+meiFoundationControllers.directive('checkUser', ['$rootScope', '$location', 'userSrv', function ($root, $location, userSrv) {
 	return {
 		link: function (scope, elem, attrs, ctrl) {
 			$root.$on('$routeChangeStart', function(event, currRoute, prevRoute){
